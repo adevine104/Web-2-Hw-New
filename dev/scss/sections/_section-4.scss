@@ -1,0 +1,54 @@
+/* =============
+    Section 4
+============= */
+
+#section-4{
+    
+    #section-4-container {
+        display: grid;
+        grid-template-columns: 15px auto 15px;
+        grid-template-areas: ". section-4 ."; 
+    
+
+        
+        @include md{
+            grid-template-columns: auto 60% auto;
+        }
+
+        @include lg{
+            grid-template-columns: auto 50% auto;
+        }
+
+        @include xl{
+            grid-template-columns: auto 800px auto;
+        }
+
+        hr {
+            height: 3px;
+            background-color: black;
+            border: none; }
+
+            h2 {
+                font-family: 'nunito';
+                font-size: 1.125rem;
+                line-height: 2.5rem;
+                color: $tan;
+                margin: 20px 0px 20px 0px; 
+
+                @include md{
+                    font-size: 1.6875rem;
+                    line-height: 3.125rem; } 
+
+                @include lg {
+                    font-size: 2.5rem;
+                    line-height: 4.375rem; } 
+                }
+
+
+    }
+
+
+    #section-4-content {
+          grid-area: section-4; }
+          text-align: center;
+}
