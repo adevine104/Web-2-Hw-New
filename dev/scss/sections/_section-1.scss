@@ -13,7 +13,7 @@ height: 50vh;
 
 @include md{
     height: 50vh;
-    background-position: center -100; } 
+    background-position: -100; } 
 
 @include lg {
     height: 90vh; } 
