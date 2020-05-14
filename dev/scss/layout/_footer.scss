@@ -12,24 +12,13 @@
     grid-template-columns: 6% auto 6%;
     grid-template-rows: repeat(1, 60px);
     grid-template-areas: ". footer ."; 
-
-    @include md{
-        grid-template-columns: 20% auto 20%;
-    }
-
-    @include lg{
-        grid-template-columns: 30% auto 30%;
-    }
-
-    @include xl{
-        grid-template-columns: 40% auto 40%;
-    }
+    
 
 #footer-content {
       grid-area: footer; 
         color: white;
+        display: flex;
+        justify-content: flex-end;
         padding-top: 40px;
-        padding-bottom: 10px;
-        text-align: right;
     }
 }

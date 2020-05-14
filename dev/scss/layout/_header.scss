@@ -10,8 +10,9 @@ header {
 
     >div {
         display: grid;
-        grid-template-areas: "logo burger"
-            "nav nav";
+        grid-template-areas: 
+        "logo burger"
+        "nav nav";
         grid-template-columns: 80% auto;
         color: $auburn;
 
@@ -32,12 +33,10 @@ header {
             }
 
             @include lg{
-                margin-top: 10px;
                 font-size: 2.5rem;
             }
 
             @include xl{
-                margin-top: 10px;
                 font-size: 2.5rem;
             }
         }
@@ -64,13 +63,15 @@ header {
         }
 
         #nav-container {
-            background-color: $white;
+            background-color: $lightgrey;
             display: none;
             grid-area: nav;
-            padding: 20px;
-            margin-top: -25px;
+            padding: 0 20px;
+            margin-top: 0px;
+            margin-bottom: 20px;
 
             @include lg {
+                background-color: $white;
                 display: block !important;
             }
         }

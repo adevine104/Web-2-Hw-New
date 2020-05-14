@@ -12,12 +12,12 @@
         }
 
         li {
-            margin-bottom: 20px;
+            border-bottom: 1px solid white;
 
             @include lg {
                 align-items: center;
                 display: flex;
-                margin: 0px 30px 0 0;
+                border-bottom: none;
             }
 
             a:link,
@@ -25,11 +25,33 @@
                 color: $auburn;
                 text-decoration: none;
                 transition: 0.25s;
+                padding: 20px 0;
+                display: inline-block;
+                width: 100%;
+                font-weight: 700;
+
+                @include lg{
+                    color: $auburn;
+                    font-size: rem-calc(20);
+                    padding: 5px 0;
+                    padding: 0 30px;
+                    border-right: 1px solid $auburn;
+                }
             }
 
             a:hover,
             a:active {
                 color: $tan;
+            }
+        }
+        
+
+        li:last-child{
+            border: none;
+            @include lg{
+                a{
+                    border: none;
+                }
             }
         }
     }
