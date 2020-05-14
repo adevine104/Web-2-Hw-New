@@ -8,17 +8,20 @@ background-image: url('../img/section-1/hero.jpg');
 //border: 1px solid red;
 background-size: cover;
 background-repeat: no-repeat;
-background-position: center;
-height: 50vh; 
+background-position: 0px 40px;
+height: 40vh; 
 
 @include md{
     height: 50vh;
-    background-position: -100; } 
+    background-position: center 30px; } 
 
 @include lg {
-    height: 90vh; } 
+    height: 90vh; 
+    background-position: center 0px; } 
 
 @include xl{
-    height: 90vh; } 
+    height: 90vh; 
+    background-position: center -30px;
+} 
 
 }

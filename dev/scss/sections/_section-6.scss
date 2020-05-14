@@ -8,25 +8,27 @@
         display: grid;
         grid-template-columns: auto 60% auto;
         grid-template-areas: ". section-6 ."; 
+        margin: 30px 0px 50px 0px;
+        }
+
+    @include lg{
+        grid-template-columns: auto 900px auto;
         }
 
     @include xl{
         grid-template-columns: auto 900px auto;
         }
 
-        @include md{
-        margin: 30px 0px 50px 0px;
-        }
-
     #section-6-content {
 
         aside{
             background-image: url('../img/section-6/circle-mask.jpg');
-            background-position: center;
-            background-position: cover;
+            background-position: -180px center;
             background-repeat: no-repeat;
-            height: 320px;
-            margin: 20px 0px 40px 0px; 
+            height: 355px;
+            width: 355px;
+            margin: 20px auto 40px auto; 
+            border-radius: 100%;
         }
         
 
@@ -47,20 +49,21 @@
             align-items: center;
             margin-bottom: 50px;
 
-
+            @include md{
+                margin-bottom: 30px;
+            }
             
                 p {
                 margin: 0px 0px 20px 0px;
                 font-family: 'Noto Serif';
                 line-height: 1.5rem;
-                font-size: 1rem; }
-            
-           
+                font-size: 1rem; 
+                text-align: justify;
 
-            @include md{
-                margin-bottom: 30px;
+                @include lg{
+                    margin-left: 50px;
+                }
             }
-
             
             #section-6-text-content{
                 grid-area: section-6-text;

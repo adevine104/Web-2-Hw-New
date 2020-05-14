@@ -363,9 +363,88 @@ textarea {
 /* =============
     Navigation
 ============= */
+#nav-container ul {
+  height: 100%;
+  text-align: right; }
+  @media (min-width: 992px) {
+    #nav-container ul {
+      display: flex;
+      justify-content: flex-end; } }
+  #nav-container ul li {
+    margin-bottom: 20px; }
+    @media (min-width: 992px) {
+      #nav-container ul li {
+        align-items: center;
+        display: flex;
+        margin: 0px 30px 0 0; } }
+    #nav-container ul li a:link,
+    #nav-container ul li a:visited {
+      color: #A25D52;
+      text-decoration: none;
+      transition: 0.25s; }
+    #nav-container ul li a:hover,
+    #nav-container ul li a:active {
+      color: #B7A78D; }
+
 /* =============
     Header
 ============= */
+header {
+  background-color: #fff;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%; }
+  header > div {
+    display: grid;
+    grid-template-areas: "logo burger" "nav nav";
+    grid-template-columns: 80% auto;
+    color: #A25D52; }
+    @media (min-width: 992px) {
+      header > div {
+        grid-template-areas: "logo nav";
+        grid-template-columns: 20% auto; } }
+    header > div #logo-container {
+      grid-area: logo;
+      padding: 20px;
+      color: #A25D52;
+      font-size: 1.5rem; }
+      @media (min-width: 768px) {
+        header > div #logo-container {
+          margin-top: 10px;
+          font-size: 2rem; } }
+      @media (min-width: 992px) {
+        header > div #logo-container {
+          margin-top: 10px;
+          font-size: 2.5rem; } }
+      @media (min-width: 1200px) {
+        header > div #logo-container {
+          margin-top: 10px;
+          font-size: 2.5rem; } }
+    header > div #burger-container {
+      align-items: center;
+      display: flex;
+      grid-area: burger;
+      justify-content: flex-end;
+      padding: 20px; }
+      @media (min-width: 768px) {
+        header > div #burger-container {
+          margin-top: 10px;
+          font-size: 1.5rem; } }
+      @media (min-width: 992px) {
+        header > div #burger-container {
+          display: none !important; } }
+      header > div #burger-container i {
+        cursor: pointer; }
+    header > div #nav-container {
+      background-color: #fff;
+      display: none;
+      grid-area: nav;
+      padding: 20px;
+      margin-top: -25px; }
+      @media (min-width: 992px) {
+        header > div #nav-container {
+          display: block !important; } }
 /* =============
     Footer
 ============= */
@@ -401,21 +480,27 @@ textarea {
   background-image: url("../img/section-1/hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-  height: 50vh; }
+  background-position: 0px 40px;
+  height: 40vh; }
   @media (min-width: 768px) {
     #section-1 {
       height: 50vh;
-      background-position: center -100; } }
+      background-position: center 30px; } }
   @media (min-width: 992px) {
     #section-1 {
-      height: 90vh; } }
+      height: 90vh;
+      background-position: center 0px; } }
   @media (min-width: 1200px) {
     #section-1 {
-      height: 90vh; } }
+      height: 90vh;
+      background-position: center -30px; } }
 /* =============
     Section 2
 ============= */
+@media (min-width: 768px) {
+  #section-2 {
+    margin-top: 30px; } }
+
 @media (min-width: 992px) {
   #section-2 {
     margin: 60px 0px; } }
@@ -471,18 +556,18 @@ textarea {
     border: none; }
   #section-2 #section-2-desktop #section-2-container h3 {
     font-family: 'Nunito';
-    line-height: 2.5rem;
-    font-size: 1.0625rem;
-    margin: 20px 0px 0px 0px; }
+    line-height: 2rem;
+    font-size: 1.5rem;
+    margin: 20px 0px 10px 0px; }
     @media (min-width: 768px) {
       #section-2 #section-2-desktop #section-2-container h3 {
         line-height: 2.5rem;
         font-size: 1.5rem; } }
   #section-2 #section-2-desktop #section-2-container p {
-    margin: 0px 0px 20px 0px;
     font-family: 'Noto Serif';
-    line-height: 2.5rem;
-    font-size: 1rem; }
+    line-height: 1.75rem;
+    font-size: 1rem;
+    margin: 0px 0px 20px 0px; }
     @media (min-width: 768px) {
       #section-2 #section-2-desktop #section-2-container p {
         line-height: 2.5rem;
@@ -517,11 +602,12 @@ textarea {
     Section 4
 ============= */
 #section-4 {
-  text-align: center; }
+  text-align: center;
+  margin: 35px 0 20px 0; }
   #section-4 #section-4-container {
     display: grid;
-    grid-template-columns: 15px auto 15px;
-    grid-template-areas: ". section-4 ."; }
+    grid-template-areas: ". section-4 .";
+    grid-template-columns: 15px auto 15px; }
     @media (min-width: 768px) {
       #section-4 #section-4-container {
         grid-template-columns: auto 60% auto; } }
@@ -532,18 +618,18 @@ textarea {
       #section-4 #section-4-container {
         grid-template-columns: auto 800px auto; } }
     #section-4 #section-4-container hr {
-      height: 3px;
       background-color: black;
-      border: none; }
+      border: none;
+      height: 3px; }
     #section-4 #section-4-container h2 {
-      font-family: 'nunito';
-      font-size: 1.125rem;
-      line-height: 2.5rem;
       color: #B7A78D;
+      font-family: 'nunito';
+      font-size: 1.5rem;
+      line-height: 2.5rem;
       margin: 20px 0px 20px 0px; }
       @media (min-width: 768px) {
         #section-4 #section-4-container h2 {
-          font-size: 1.6875rem;
+          font-size: 2rem;
           line-height: 3.125rem; } }
       @media (min-width: 992px) {
         #section-4 #section-4-container h2 {
@@ -565,7 +651,7 @@ textarea {
       grid-template-columns: auto 768px auto; } }
   @media (min-width: 992px) {
     #section-5 {
-      grid-template-columns: auto 1900px auto; } }
+      grid-template-columns: auto 1000px auto; } }
   @media (min-width: 1200px) {
     #section-5 {
       grid-template-columns: auto 1200px auto; } }
@@ -610,23 +696,25 @@ textarea {
   #section-6 {
     display: grid;
     grid-template-columns: auto 60% auto;
-    grid-template-areas: ". section-6 ."; } }
+    grid-template-areas: ". section-6 .";
+    margin: 30px 0px 50px 0px; } }
+
+@media (min-width: 992px) {
+  #section-6 {
+    grid-template-columns: auto 900px auto; } }
 
 @media (min-width: 1200px) {
   #section-6 {
     grid-template-columns: auto 900px auto; } }
 
-@media (min-width: 768px) {
-  #section-6 {
-    margin: 30px 0px 50px 0px; } }
-
 #section-6 #section-6-content aside {
   background-image: url("../img/section-6/circle-mask.jpg");
-  background-position: center;
-  background-position: cover;
+  background-position: -180px center;
   background-repeat: no-repeat;
-  height: 320px;
-  margin: 20px 0px 40px 0px; }
+  height: 355px;
+  width: 355px;
+  margin: 20px auto 40px auto;
+  border-radius: 100%; }
 
 @media (min-width: 768px) {
   #section-6 #section-6-content {
@@ -643,14 +731,18 @@ textarea {
   grid-template-areas: ". section-6-text .";
   align-items: center;
   margin-bottom: 50px; }
+  @media (min-width: 768px) {
+    #section-6 #section-6-content #section-6-text {
+      margin-bottom: 30px; } }
   #section-6 #section-6-content #section-6-text p {
     margin: 0px 0px 20px 0px;
     font-family: 'Noto Serif';
     line-height: 1.5rem;
-    font-size: 1rem; }
-  @media (min-width: 768px) {
-    #section-6 #section-6-content #section-6-text {
-      margin-bottom: 30px; } }
+    font-size: 1rem;
+    text-align: justify; }
+    @media (min-width: 992px) {
+      #section-6 #section-6-content #section-6-text p {
+        margin-left: 50px; } }
   #section-6 #section-6-content #section-6-text #section-6-text-content {
     grid-area: section-6-text; }
 
@@ -681,3 +773,63 @@ textarea {
     padding-top: 40px;
     padding-bottom: 10px;
     text-align: right; }
+
+/* =============
+    Header
+============= */
+header {
+  background-color: #fff;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%; }
+  header > div {
+    display: grid;
+    grid-template-areas: "logo burger" "nav nav";
+    grid-template-columns: 80% auto;
+    color: #A25D52; }
+    @media (min-width: 992px) {
+      header > div {
+        grid-template-areas: "logo nav";
+        grid-template-columns: 20% auto; } }
+    header > div #logo-container {
+      grid-area: logo;
+      padding: 20px;
+      color: #A25D52;
+      font-size: 1.5rem; }
+      @media (min-width: 768px) {
+        header > div #logo-container {
+          margin-top: 10px;
+          font-size: 2rem; } }
+      @media (min-width: 992px) {
+        header > div #logo-container {
+          margin-top: 10px;
+          font-size: 2.5rem; } }
+      @media (min-width: 1200px) {
+        header > div #logo-container {
+          margin-top: 10px;
+          font-size: 2.5rem; } }
+    header > div #burger-container {
+      align-items: center;
+      display: flex;
+      grid-area: burger;
+      justify-content: flex-end;
+      padding: 20px; }
+      @media (min-width: 768px) {
+        header > div #burger-container {
+          margin-top: 10px;
+          font-size: 1.5rem; } }
+      @media (min-width: 992px) {
+        header > div #burger-container {
+          display: none !important; } }
+      header > div #burger-container i {
+        cursor: pointer; }
+    header > div #nav-container {
+      background-color: #fff;
+      display: none;
+      grid-area: nav;
+      padding: 20px;
+      margin-top: -25px; }
+      @media (min-width: 992px) {
+        header > div #nav-container {
+          display: block !important; } }
