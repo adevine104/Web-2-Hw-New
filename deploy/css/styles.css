@@ -396,25 +396,24 @@ textarea {
     @media (min-width: 992px) {
       #nav-container ul li {
         align-items: center;
-        display: flex;
-        border-bottom: none; } }
+        border-bottom: none;
+        display: flex; } }
     #nav-container ul li a:link,
     #nav-container ul li a:visited {
       color: #A25D52;
+      display: inline-block;
+      font-weight: 700;
+      padding: 20px 0;
       text-decoration: none;
       transition: 0.25s;
-      padding: 20px 0;
-      display: inline-block;
-      width: 100%;
-      font-weight: 700; }
+      width: 100%; }
       @media (min-width: 992px) {
         #nav-container ul li a:link,
         #nav-container ul li a:visited {
+          border-right: 1px solid #A25D52;
           color: #A25D52;
           font-size: 1.25rem;
-          padding: 5px 0;
-          padding: 0 30px;
-          border-right: 1px solid #A25D52; } }
+          padding: 0 30px; } }
     #nav-container ul li a:hover,
     #nav-container ul li a:active {
       color: #B7A78D; }
@@ -433,23 +432,23 @@ header {
   top: 0;
   width: 100%; }
   header > div {
+    color: #A25D52;
     display: grid;
     grid-template-areas: "logo burger" "nav nav";
-    grid-template-columns: 80% auto;
-    color: #A25D52; }
+    grid-template-columns: 80% auto; }
     @media (min-width: 992px) {
       header > div {
         grid-template-areas: "logo nav";
         grid-template-columns: 20% auto; } }
     header > div #logo-container {
-      grid-area: logo;
-      padding: 20px;
       color: #A25D52;
-      font-size: 1.5rem; }
+      font-size: 1.5rem;
+      grid-area: logo;
+      padding: 20px; }
       @media (min-width: 768px) {
         header > div #logo-container {
-          margin-top: 10px;
-          font-size: 2rem; } }
+          font-size: 2rem;
+          margin-top: 10px; } }
       @media (min-width: 992px) {
         header > div #logo-container {
           font-size: 2.5rem; } }
@@ -464,8 +463,8 @@ header {
       padding: 20px; }
       @media (min-width: 768px) {
         header > div #burger-container {
-          margin-top: 10px;
-          font-size: 1.5rem; } }
+          font-size: 1.5rem;
+          margin-top: 10px; } }
       @media (min-width: 992px) {
         header > div #burger-container {
           display: none !important; } }
@@ -475,9 +474,9 @@ header {
       background-color: #D3D3D3;
       display: none;
       grid-area: nav;
-      padding: 0 20px;
+      margin-bottom: 20px;
       margin-top: 0px;
-      margin-bottom: 20px; }
+      padding: 0 20px; }
       @media (min-width: 992px) {
         header > div #nav-container {
           background-color: #fff;
@@ -486,18 +485,18 @@ header {
     Footer
 ============= */
 #footer {
+  background-color: #A25D52;
   background-image: url("../img/footer/logo.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #A25D52;
   display: grid;
+  grid-template-areas: ". footer .";
   grid-template-columns: 6% auto 6%;
-  grid-template-rows: repeat(1, 60px);
-  grid-template-areas: ". footer ."; }
+  grid-template-rows: repeat(1, 60px); }
   #footer #footer-content {
-    grid-area: footer;
     color: white;
     display: flex;
+    grid-area: footer;
     justify-content: flex-end;
     padding-top: 40px; }
 
@@ -506,22 +505,22 @@ header {
 ============= */
 #section-1 {
   background-image: url("../img/section-1/hero.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: 0px 40px;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 40vh; }
   @media (min-width: 768px) {
     #section-1 {
-      height: 50vh;
-      background-position: center 30px; } }
+      background-position: center 30px;
+      height: 50vh; } }
   @media (min-width: 992px) {
     #section-1 {
-      height: 90vh;
-      background-position: center 0px; } }
+      background-position: center 0px;
+      height: 90vh; } }
   @media (min-width: 1200px) {
     #section-1 {
-      height: 90vh;
-      background-position: center -30px; } }
+      background-position: center -30px;
+      height: 90vh; } }
 /* =============
     Section 2
 ============= */
@@ -536,14 +535,14 @@ header {
 @media (min-width: 1200px) {
   #section-2 {
     display: grid;
-    grid-template-columns: auto 1200 auto;
-    grid-template-areas: ". section-2 ."; } }
+    grid-template-areas: ". section-2 .";
+    grid-template-columns: auto 1200 auto; } }
 
 @media (min-width: 768px) {
   #section-2 #section-2-desktop {
     display: grid;
-    grid-template-columns: 40% auto;
-    grid-template-areas: "img section-2-content"; } }
+    grid-template-areas: "img section-2-content";
+    grid-template-columns: 40% auto; } }
 
 @media (min-width: 1200px) {
   #section-2 #section-2-desktop {
@@ -552,9 +551,9 @@ header {
 
 #section-2 #section-2-desktop aside {
   background-image: url("../img/section-2/popcorn.jpg");
-  height: 80vh;
   background-position: center;
-  background-size: cover; }
+  background-size: cover;
+  height: 80vh; }
   @media (min-width: 768px) {
     #section-2 #section-2-desktop aside {
       height: 45vh; } }
@@ -562,10 +561,10 @@ header {
     #section-2 #section-2-desktop aside {
       height: 60vh; } }
 #section-2 #section-2-desktop #section-2-container {
-  display: grid;
-  grid-template-columns: 15px auto 15px;
-  grid-template-areas: ". section-2-content .";
   align-items: center;
+  display: grid;
+  grid-template-areas: ". section-2-content .";
+  grid-template-columns: 15px auto 15px;
   margin: 65px 0px 65px 0px;
   text-align: center; }
   @media (min-width: 768px) {
@@ -576,30 +575,30 @@ header {
       margin: 20px 0px 20px 0px; } }
   @media (min-width: 1200px) {
     #section-2 #section-2-desktop #section-2-container {
-      text-align: left;
-      margin-left: 20px; } }
+      margin-left: 20px;
+      text-align: left; } }
   #section-2 #section-2-desktop #section-2-container hr {
-    height: 3px;
     background-color: #B7A78D;
-    border: none; }
+    border: none;
+    height: 3px; }
   #section-2 #section-2-desktop #section-2-container h3 {
     font-family: 'Nunito';
-    line-height: 2rem;
     font-size: 1.5rem;
+    line-height: 2rem;
     margin: 20px 0px 10px 0px; }
     @media (min-width: 768px) {
       #section-2 #section-2-desktop #section-2-container h3 {
-        line-height: 2.5rem;
-        font-size: 1.5rem; } }
+        font-size: 1.5rem;
+        line-height: 2.5rem; } }
   #section-2 #section-2-desktop #section-2-container p {
     font-family: 'Noto Serif';
-    line-height: 1.75rem;
     font-size: 1rem;
+    line-height: 1.75rem;
     margin: 0px 0px 20px 0px; }
     @media (min-width: 768px) {
       #section-2 #section-2-desktop #section-2-container p {
-        line-height: 2.5rem;
-        font-size: 1.125rem; } }
+        font-size: 1.125rem;
+        line-height: 2.5rem; } }
   #section-2 #section-2-desktop #section-2-container #section-2-content {
     grid-area: section-2-content; }
 
@@ -611,15 +610,15 @@ header {
 ============= */
 #section-3 {
   background-image: url("../img/section-3/hero-2.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 50vh;
   margin: 30px 0px 15px 0px; }
   @media (min-width: 768px) {
     #section-3 {
-      height: 50vh;
-      background-position: center -100; } }
+      background-position: center -100;
+      height: 50vh; } }
   @media (min-width: 992px) {
     #section-3 {
       height: 90vh; } }
@@ -630,8 +629,8 @@ header {
     Section 4
 ============= */
 #section-4 {
-  text-align: center;
-  margin: 35px 0 20px 0; }
+  margin: 35px 0 20px 0;
+  text-align: center; }
   #section-4 #section-4-container {
     display: grid;
     grid-template-areas: ". section-4 .";
@@ -723,8 +722,8 @@ header {
 @media (min-width: 768px) {
   #section-6 {
     display: grid;
-    grid-template-columns: auto 60% auto;
     grid-template-areas: ". section-6 .";
+    grid-template-columns: auto 60% auto;
     margin: 30px 0px 50px 0px; } }
 
 @media (min-width: 992px) {
@@ -739,14 +738,10 @@ header {
   background-image: url("../img/section-6/circle-mask.jpg");
   background-position: -180px center;
   background-repeat: no-repeat;
+  border-radius: 100%;
   height: 355px;
-  width: 355px;
   margin: 20px auto 40px auto;
-  border-radius: 100%; }
-
-@media (min-width: 768px) {
-  #section-6 #section-6-content {
-    grid-area: section-6; } }
+  width: 355px; }
 
 @media (min-width: 992px) {
   #section-6 #section-6-content {
@@ -754,19 +749,19 @@ header {
     grid-template-columns: 40% auto; } }
 
 #section-6 #section-6-content #section-6-text {
-  display: grid;
-  grid-template-columns: 10px auto 10px;
-  grid-template-areas: ". section-6-text .";
   align-items: center;
+  display: grid;
+  grid-template-areas: ". section-6-text .";
+  grid-template-columns: 10px auto 10px;
   margin-bottom: 50px; }
   @media (min-width: 768px) {
     #section-6 #section-6-content #section-6-text {
       margin-bottom: 30px; } }
   #section-6 #section-6-content #section-6-text p {
-    margin: 0px 0px 20px 0px;
     font-family: 'Noto Serif';
-    line-height: 1.5rem;
     font-size: 1rem;
+    line-height: 1.5rem;
+    margin: 0px 0px 20px 0px;
     text-align: justify; }
     @media (min-width: 992px) {
       #section-6 #section-6-content #section-6-text p {
@@ -778,18 +773,18 @@ header {
     Footer
 ============= */
 #footer {
+  background-color: #A25D52;
   background-image: url("../img/footer/logo.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #A25D52;
   display: grid;
+  grid-template-areas: ". footer .";
   grid-template-columns: 6% auto 6%;
-  grid-template-rows: repeat(1, 60px);
-  grid-template-areas: ". footer ."; }
+  grid-template-rows: repeat(1, 60px); }
   #footer #footer-content {
-    grid-area: footer;
     color: white;
     display: flex;
+    grid-area: footer;
     justify-content: flex-end;
     padding-top: 40px; }
 
@@ -803,23 +798,23 @@ header {
   top: 0;
   width: 100%; }
   header > div {
+    color: #A25D52;
     display: grid;
     grid-template-areas: "logo burger" "nav nav";
-    grid-template-columns: 80% auto;
-    color: #A25D52; }
+    grid-template-columns: 80% auto; }
     @media (min-width: 992px) {
       header > div {
         grid-template-areas: "logo nav";
         grid-template-columns: 20% auto; } }
     header > div #logo-container {
-      grid-area: logo;
-      padding: 20px;
       color: #A25D52;
-      font-size: 1.5rem; }
+      font-size: 1.5rem;
+      grid-area: logo;
+      padding: 20px; }
       @media (min-width: 768px) {
         header > div #logo-container {
-          margin-top: 10px;
-          font-size: 2rem; } }
+          font-size: 2rem;
+          margin-top: 10px; } }
       @media (min-width: 992px) {
         header > div #logo-container {
           font-size: 2.5rem; } }
@@ -834,8 +829,8 @@ header {
       padding: 20px; }
       @media (min-width: 768px) {
         header > div #burger-container {
-          margin-top: 10px;
-          font-size: 1.5rem; } }
+          font-size: 1.5rem;
+          margin-top: 10px; } }
       @media (min-width: 992px) {
         header > div #burger-container {
           display: none !important; } }
@@ -845,9 +840,9 @@ header {
       background-color: #D3D3D3;
       display: none;
       grid-area: nav;
-      padding: 0 20px;
+      margin-bottom: 20px;
       margin-top: 0px;
-      margin-bottom: 20px; }
+      padding: 0 20px; }
       @media (min-width: 992px) {
         header > div #nav-container {
           background-color: #fff;

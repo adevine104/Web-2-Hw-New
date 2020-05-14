@@ -1,23 +1,20 @@
 /* =============
     Footer
 ============= */
-#footer{
-
+#footer {
+    background-color: $auburn;
     background-image: url('../img/footer/logo.png');
     background-position: center;
     background-repeat: no-repeat;
-
-    background-color: $auburn;
     display: grid;
+    grid-template-areas: ". footer .";
     grid-template-columns: 6% auto 6%;
     grid-template-rows: repeat(1, 60px);
-    grid-template-areas: ". footer ."; 
-    
 
-#footer-content {
-      grid-area: footer; 
+    #footer-content {
         color: white;
         display: flex;
+        grid-area: footer;
         justify-content: flex-end;
         padding-top: 40px;
     }

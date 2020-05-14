@@ -23,15 +23,13 @@
         display: grid;
         gap: 20px;
         grid-area: section-5;
-        grid-template-areas: 
-            "g1"
+        grid-template-areas: "g1"
             "g2"
             "g3";
         grid-template-rows: repeat(3, 300px);
 
         @include md {
-            grid-template-areas: 
-                "g1 g1"
+            grid-template-areas: "g1 g1"
                 "g1 g1"
                 "g2 g3";
             grid-template-columns: repeat(2, 1fr);
@@ -39,8 +37,7 @@
         }
 
         @include lg {
-            grid-template-areas: 
-                "g1 g1 g2"
+            grid-template-areas: "g1 g1 g2"
                 "g1 g1 g3";
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 400px);

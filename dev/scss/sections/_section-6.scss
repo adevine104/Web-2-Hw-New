@@ -1,71 +1,62 @@
 /* =============
     Section 6
 ============= */
-
-#section-6{
-
-    @include md{
+#section-6 {
+    @include md {
         display: grid;
+        grid-template-areas: ". section-6 .";
         grid-template-columns: auto 60% auto;
-        grid-template-areas: ". section-6 ."; 
         margin: 30px 0px 50px 0px;
-        }
+    }
 
-    @include lg{
+    @include lg {
         grid-template-columns: auto 900px auto;
-        }
+    }
 
-    @include xl{
+    @include xl {
         grid-template-columns: auto 900px auto;
-        }
+    }
 
     #section-6-content {
-
-        aside{
+        aside {
             background-image: url('../img/section-6/circle-mask.jpg');
             background-position: -180px center;
             background-repeat: no-repeat;
-            height: 355px;
-            width: 355px;
-            margin: 20px auto 40px auto; 
             border-radius: 100%;
-        }
-        
-
-        @include md{
-            grid-area: section-6
+            height: 355px;
+            margin: 20px auto 40px auto;
+            width: 355px;
         }
 
-        @include lg{
+        @include lg {
             display: grid;
             grid-template-columns: 40% auto;
-         }
-    
+        }
 
-        #section-6-text{
-            display: grid;
-            grid-template-columns: 10px auto 10px;
-            grid-template-areas: ". section-6-text .";
+        #section-6-text {
             align-items: center;
+            display: grid;
+            grid-template-areas: ". section-6-text .";
+            grid-template-columns: 10px auto 10px;
             margin-bottom: 50px;
 
-            @include md{
+            @include md {
                 margin-bottom: 30px;
             }
-            
-                p {
-                margin: 0px 0px 20px 0px;
+
+            p {
                 font-family: 'Noto Serif';
+                font-size: 1rem;
                 line-height: 1.5rem;
-                font-size: 1rem; 
+                margin: 0px 0px 20px 0px;
                 text-align: justify;
 
-                @include lg{
+                @include lg {
                     margin-left: 50px;
                 }
             }
-            
-            #section-6-text-content{
+
+            #section-6-text-content {
                 grid-area: section-6-text;
             }
         }
